@@ -15,6 +15,7 @@ function getName(){
     for (var i=0;i<gr.length;i++){
         if (gr[i].checked){mas2.push(gr[i].value+','+'\t')}
     }
+    
     console.log(mas2);
 id = document.forms["reg"].elements["id"].value;
     var docDefinition = { content: [
