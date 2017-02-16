@@ -100,27 +100,19 @@ function addspeech() {
     $("#ste2").val("");
  z++;
 }
+members=['зав. каф. Власова Е.З.', 'проф. Абрамян Г.В.', 'доц. Гончарова С.В.', 'доц. Государев И.Б.', 'проф. Готская И.Б.', 'доц. Карпова Н.А.', 'доц.  Авксентьева Е.Ю.', 'доц. Полякова Н.А.', 'доц. Ханин Д.С.', 'доц. Кужельная О.В.', 'ст. преп. Ильина Т.С.', 'асс. Аксютин П.А.', 'асс. Жуков Н.Н.']
+$(function(){
+    for(var l=0;l<members.length;l++){
+    $("#mem").append("<input type='checkbox' checked name='member[]' value='"+members[l]+"' />"+members[l]+"")
+    }
+})
 </script>
 </head>
 <body>
 <form  id="reg" name="reg" action="dataBase.php" method="post">
 Введите номер протокола <input text="text" id="id" name="id" />
- <br>Список присутствующих:<br>    
- <input type="checkbox" checked name="member[]" value="зав. каф. Власова Е.З." />зав. каф. Власова Е.З.
- <input type="checkbox" checked name="member[]" value="проф. Фокин Р.Р." />проф. Фокин Р.Р.
- <input type="checkbox" checked name="member[]" value="проф. Абрамян Г.В." />проф. Абрамян Г.В.
- <input type="checkbox" checked name="member[]" value="доц. Гончарова С.В." />доц. Гончарова С.В.
- <input type="checkbox" checked name="member[]" value="доц. Государев И.Б." />доц. Государев И.Б.
- <input type="checkbox" checked name="member[]" value="Карпова Н.А." />доц. Карпова Н.А.
- <input type="checkbox" checked name="member[]" value="доц.  Авксентьева Е.Ю." />доц.  Авксентьева Е.Ю.
- <input type="checkbox" checked name="member[]" value="доц. Авксентьев С.Ю." />доц. Авксентьев С.Ю.
- <input type="checkbox" checked name="member[]" value="доц. Полякова Н.А." />доц. Полякова Н.А.
- <input type="checkbox" checked name="member[]" value="доц. Ханин Д.С." />доц. Ханин Д.С.
- <input type="checkbox" checked name="member[]" value="доц. Тарасова Т.Е." />доц. Тарасова Т.Е.
- <input type="checkbox" checked name="member[]" value="ст. преп. Ильина Т.С." />ст. преп. Ильина Т.С.
- <input type="checkbox" checked name="member[]" value="асс. Золотов Д.В." />асс. Золотов Д.В.
- <input type="checkbox" checked name="member[]" value="асс. Аксютин П.А." />асс. Аксютин П.А.
- <input type="checkbox" checked name="member[]" value="асс. Жуков Н.Н." />асс. Жуков Н.Н.
+ <br>Список присутствующих:<br>
+ <div id="mem"></div>
     <br>Повестка дня:<br><div id="aim"></div>
             <input value="Добавить" type="button" size="200" href="#mini-modal-window1" data-toggle="modal">
   <div id="mini-modal-window1" class="modal fade">
