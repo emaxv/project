@@ -55,7 +55,7 @@ mysql_select_db($db); /*Подключение к базе данных на с�
 mysql_query("SET NAMES 'utf8'"); 
 mysql_query("SET CHARACTER SET 'utf8'");
 mysql_query("SET SESSION collation_connection = 'utf8_general_ci'");
-mysql_query("CREATE TABLE IF NOT EXISTS tst2(id int, date DATE, member text, povestka text, speech text, solutions text)") or die(mysql_error());
+mysql_query("CREATE TABLE IF NOT EXISTS reports(id int, date DATE, member text, povestka text, speech text, solutions text)") or die(mysql_error());
 
 
 $mas2 = serialize($mas);
@@ -63,7 +63,7 @@ $povestkamas2 = serialize($povestkamas);
 $speechmas2 = serialize($speechmas);
 $solutionsmas2 = serialize($solutionsmas);
 
-$insert_sql = "INSERT INTO tst2 (id, date, member, povestka, speech, solutions)" . "VALUES('{$id}', '{$date}', '{$mas2}', '{$povestkamas2}', '{$speechmas2}', '{$solutionsmas2}');"; mysql_query($insert_sql);
+$insert_sql = "INSERT INTO reports (id, date, member, povestka, speech, solutions)" . "VALUES('{$id}', '{$date}', '{$mas2}', '{$povestkamas2}', '{$speechmas2}', '{$solutionsmas2}');"; mysql_query($insert_sql);
 
 
 
