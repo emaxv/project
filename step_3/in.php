@@ -42,6 +42,7 @@ id = document.forms["reg"].elements["id"].value;
         text:'Е.З. Власова\n\nИ.Б. Государев', style:'righ'
         }
     ]}
+        
     ],
        
          styles: {
