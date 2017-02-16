@@ -15,7 +15,10 @@ function getName(){
     var mas2 = [];
     var gr = document.getElementsByName('member[]');
     for (var i=0;i<gr.length;i++){
-        if (gr[i].checked){mas2.push(gr[i].value+','+'\t')}
+        if (gr[i].checked){
+            mas2.push(gr[i].value+','+'\t');
+            
+        }
     }
     console.log(mas2);
 id = document.forms["reg"].elements["id"].value;
@@ -74,6 +77,7 @@ pdfMake.createPdf(docDefinition).open();
 function add() {
     $("#aim").append("<input type='text' name='aims[]' id='n"+j+"' value="+document.reg.step.value+">");
     povestkamas.push(j+'.'+document.reg.step.value+'\n');
+    $("#step").val("");
  j++;
 }
 /*
@@ -84,8 +88,9 @@ function add() {
 function soladd() {
     $("#sol").append("<input type='text' name='solutions[]' id='m"+k+"' value="+document.reg.step2.value+">");
     solutionsmas.push(k+'.'+document.reg.step2.value+'\n');
- k++
-};
+    $("#step2").val("");
+ k++;
+}
 /*
 Добавление информации о выступающих
 */
@@ -94,6 +99,8 @@ function soladd() {
 function addspeech() {
     $("#speech").append("<input type='text' name='speach[]' id='z"+z+"' value="+ document.reg.ste1.value+"."+document.reg.ste2.value +">");
     speechmas.push('Вопрос №'+z+'\n'+document.reg.ste1.value+"."+document.reg.ste2.value+'\n\n');
+    $("#ste1").val("");
+    $("#ste2").val("");
  z++;
 }
 </script>
