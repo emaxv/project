@@ -20,7 +20,6 @@ function getName(){
             
         }
     }
-    console.log(mas2);
 id = document.forms["reg"].elements["id"].value;
     var docDefinition = { content: [
         {text: 'Протокол №'+id, style: 'mid'},
@@ -65,9 +64,7 @@ id = document.forms["reg"].elements["id"].value;
         fontsize: 14
     } }                
                         };
-        console.log(povestkamas);
-    console.log(solutionsmas);
-pdfMake.createPdf(docDefinition).open();
+pdfMake.createPdf(docDefinition).download(''+today+'.pdf');
 }
 /*
 Добавление информации о повестке дня

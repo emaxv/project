@@ -1,5 +1,5 @@
 <?php
-$date_today = date("d.m.y");
+$date_today = date("d.m.Y");
 $mas = array();
 $gr = $_POST["member"];
 $N = count($gr);
@@ -63,7 +63,7 @@ $povestkamas2 = serialize($povestkamas);
 $speechmas2 = serialize($speechmas);
 $solutionsmas2 = serialize($solutionsmas);
 
-$insert_sql = "INSERT INTO reports (id, date, member, povestka, speech, solutions)" . "VALUES('{$id}', '{$date}', '{$mas2}', '{$povestkamas2}', '{$speechmas2}', '{$solutionsmas2}');"; mysql_query($insert_sql);
+$insert_sql = "INSERT INTO reports (id, date, member, povestka, speech, solutions)" . "VALUES('{$id}', '{$date_today}', '{$mas2}', '{$povestkamas2}', '{$speechmas2}', '{$solutionsmas2}');"; mysql_query($insert_sql);
 
 
 
