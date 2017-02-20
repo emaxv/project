@@ -46,10 +46,10 @@ print_r($solutionsmas);
 print_r($speechmas);
 
 
-$host="localhost";/*Имя сервера*/
-$user="emaxv";/*Имя пользователя*/
+$host="";/*Имя сервера*/
+$user="";/*Имя пользователя*/
 $password="";/*Пароль пользователя*/
-$db="c9";/*Имя базы данных*/
+$db="";/*Имя базы данных*/
 mysql_connect($host, $user, $password); /*Подключение к серверу*/
 mysql_select_db($db); /*Подключение к базе данных на сервере*/
 mysql_query("SET NAMES 'utf8'"); 
